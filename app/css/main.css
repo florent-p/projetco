@@ -7,6 +7,7 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Rubik:400,700,700i");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -465,11 +466,6 @@ template {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
-  background-size: 8.33333%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top;
 }
 
 .nav .nav__navbar:after {
@@ -479,16 +475,23 @@ template {
 }
 
 .nav .nav__navbar .navbar__logo {
-  width: 16.66667%;
+  width: 33.33333%;
   float: left;
-  padding-left: 3.61111%;
-  padding-right: 3.61111%;
-  background: blue;
+  padding-left: 7.22222%;
+  padding-right: 7.22222%;
+  background: #0e1a32;
   height: 80px;
 }
 
 .nav .nav__navbar .navbar__menu {
-  margin-left: 83.33333%;
-  background: red;
+  margin-left: 66.66667%;
+  background: #070e1a;
   height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
