@@ -1,0 +1,39 @@
+@import "susy";
+@import "partials/normalize";
+
+$susy: (
+    global-box-sizing: border-box,
+    container: 1200px,
+    columns: 12,
+    gutters: 6.5,
+    gutter-position: inside,
+    debug: (image: show) 
+);
+
+
+/* ! CSS TENNIS FRANCHE-COMTE 
+ * ================================================================== */
+
+@include border-box-sizing;
+
+.nav {
+    @include span(full no-gutter);
+    background-color: rgb(14,26,50);
+    height: 80px;
+    
+    .nav__navbar {
+        @include container;
+      
+        .navbar__logo {
+            @include span(2 of 12);
+            background: blue;
+            height: 80px;
+        }
+        
+        .navbar__menu {
+            @include pre(10 of 12);
+            background: red;
+            height: 80px;
+        }
+    }
+}
