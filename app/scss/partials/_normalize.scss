@@ -459,3 +459,16 @@ template {
 [hidden] {
   display: none;
 }
+
+/* Lists
+   ========================================================================== */
+
+/**
+ * Reset list style.
+ */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
