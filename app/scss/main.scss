@@ -7,7 +7,7 @@ $susy: (
     global-box-sizing: border-box,
     container: 440px,
     columns: 6,
-    gutters: 6.5,
+    gutters: 2,
     gutter-position: inside
 );
 
@@ -25,7 +25,7 @@ $susy: (
     height: 80px;
     
     .nav__navbar {
-        @include span (full)
+        @include span(full);
       
         .navbar__logo {
             @include span(4 of 6);
@@ -46,25 +46,59 @@ $susy: (
             justify-content: center;
             color: #fff;
             @include font-opensans(700);
+            
+            &.menu--active {
+                background-color: $rouge;
+            }
         }
     }
     
     .nav__menu {
-        @include span (full no-gutter);
+        display: none;
+        @include span(full no-gutter);
         background-color: $rouge;
         padding: 20px 0;
         
         .menu__sub {
-            @include span(full);
+            @include span(full no-gutter);
             color: rgb(255, 255, 255);
             @include font-rubik(300);
             font-size: 1.2rem;
             position: relative;
+            margin-bottom: 10px;
+            
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            
+             &:after {
+                    content: "\25BC";
+                    position: absolute;
+                    right: gutter();
+                    top: 12px;
+                    font-size: .8rem;
+            }
+                
+            &.cat--opened:after {
+                content: "\25B2";
+                position: absolute;
+                right: gutter();
+                top: 12px;
+                font-size: .8rem;    
+            }
             
             .sub__cat {
+                @include span(full);
                 background-color: $rouge-back;
-                padding: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                position: relative;
                 
+            }
+            
+            .sub__links {
+                @include span(full);
+                display: none;
             }
             
             .sub__links li {
