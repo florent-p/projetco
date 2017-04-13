@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Rubik:300,400,700,700i');
 
-@mixin font-opensans($weight, $style: normal) {
+@mixin font-opensans($weight: 400, $style: normal) {
     font-family: "Open Sans", sans-serif;
     font-weight: $weight;
     font-style: $style;
 }
 
-@mixin font-rubik($weight, $style: normal) {
+@mixin font-rubik($weight: 400, $style: normal) {
     font-family: "Rubik", sans-serif;
     font-weight: $weight;
     font-style: $style;
@@ -15,7 +15,7 @@
 
 h2 {
     @include font-rubik(700, italic);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     color: rgb(245, 96, 78);
     margin: 0 0 20px 0;

@@ -1,0 +1,17 @@
+@import "typo";
+@import "variables";
+
+.button--white {
+    @include font-rubik(300);
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 25px;
+    transition: all .1s ease-in-out;
+} 
+
+.button--white:hover {
+    background-color: $rouge;
+    border: 1px solid $rouge;
+} 

@@ -1,6 +1,7 @@
 @import "susy";
 @import "partials/normalize";
 @import "partials/typo";
+@import "partials/buttons";
 @import "partials/variables";
 
 $susy: (
@@ -173,4 +174,66 @@ header {
     text-align: center;
     text-transform: uppercase;
     font-size: 1.2rem;
+}
+
+.header__blocks {
+    @include span(6);
+    position: relative;
+    margin-top: 50px;
+    
+    & [class^="block__"] {
+        background-color: $bleu;
+        text-align: center;
+        padding: 20px 0;
+        
+        & *:not(a) {
+            display: block;
+            text-align: center;
+            @include font-rubik();
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+        }
+        
+        & .number {
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+        
+        & .type {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.header__pre-blocks {
+    display: inline-block;
+    @include font-rubik(700);
+    font-size: 1.2rem;
+    color: $rouge;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.button--block__club {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    width: 250px;
+    max-width: 100%;
+}
+
+
+
+.main {
+    @include span(full);
+    margin-top: 50px;
+}
+
+
+.main__content {
+    @include container;
 }

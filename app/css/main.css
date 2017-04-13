@@ -8,6 +8,7 @@
 /* Document
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Rubik:300,400,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Rubik:300,400,700,700i");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -462,7 +463,7 @@ h2 {
   font-family: "Rubik", sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   color: #f5604e;
   margin: 0 0 20px 0;
@@ -480,11 +481,48 @@ p {
   margin: 10px 0 0;
 }
 
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #f5604e;
+  margin: 0 0 20px 0;
+}
+
+h2:after {
+  content: '';
+  display: block;
+  background-color: #f5604e;
+  width: 60px;
+  height: 4px;
+}
+
+p {
+  margin: 10px 0 0;
+}
+
+.button--white {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px 25px;
+  transition: all .1s ease-in-out;
+}
+
+.button--white:hover {
+  background-color: #f5604e;
+  border: 1px solid #f5604e;
+}
+
 /* ! CSS TENNIS FRANCHE-COMTE 
  * ================================================================== */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -519,9 +557,12 @@ p {
   margin-left: 33.33333%;
   background: #070e1a;
   height: 80px;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -668,4 +709,81 @@ header:before {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.2rem;
+}
+
+.header__blocks {
+  width: 100%;
+  float: left;
+  padding-left: 5.55556%;
+  padding-right: 5.55556%;
+  position: relative;
+  margin-top: 50px;
+}
+
+.header__blocks [class^="block__"] {
+  background-color: #0e1a32;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header__blocks [class^="block__"] *:not(a) {
+  display: block;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.header__blocks [class^="block__"] .number {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.header__blocks [class^="block__"] .type {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.header__pre-blocks {
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #f5604e;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.button--block__club {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  width: 250px;
+  max-width: 100%;
+}
+
+.main {
+  width: 100%;
+  float: left;
+  padding-left: 5.55556%;
+  padding-right: 5.55556%;
+  margin-top: 50px;
+}
+
+.main__content {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main__content:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
