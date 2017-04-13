@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="app/css/main.css">
     
     <title>My index</title>
@@ -42,30 +44,101 @@
                             <li><a href="#">LIEN 2</a></li>
                         </ul>
             </div>
+        </div>
             
     </nav>
     
-    <div class="header">
-
-        <div class="header__hero"></div>
+    <header>
         
-        <div class="header__liens-rapides">
+        <div class="header__overlay"></div>
 
-            <div class="liens-rapides__club"></div>
-            <div class="liens-rapides__enseignant"></div>
-            <div class="liens-rapides__tournoi"></div>
-
+        <div class="header__hero">
+            
+            <div class="hero__logo-tennisfc"><img src="app/img/logo-tennisfc.png" srcset="app/img/logo-tennisfc.svg" width="235" height="111" alt="Ligue de Franche-Comté de Tennis"></div>
+            
+            <div class="hero__news">
+            
+                <h2>Individuels 2017</h2>
+                <p>Les inscriptions pour les championnats individuels catégorie « Sénior » sont ouvertes jusqu’au 19 février 2017.</p>
+                
+            </div>
+            
+            <a class="hero__button">Inscrivez-vous</a>
         </div>
+        
+    </header>
+        
+    <section class="header__blocks">
+        <span class="header__pre-blocks">En Franche-Comté, il y a forcément un tennis qui vous ressemble</span>
+
+        <div class="block__club">
+            
+            <span class="number">138</span>
+            <span class="type">clubs</span>
+            <a class="button--white button--block__club">Trouvez votre club</a>
+            
+        </div>
+        
+        <div class="block__club__enseignant">
+        
+            <span class="number">192</span>
+            <span class="type">tournois</span>
+            <a class="button--white button--block__club">Trouvez votre tournoi</a>
+        
+        </div>
+        
+        <div class="block__club__tournoi">
+        
+            <span class="number">138</span>
+            <span class="type">enseignants</span>
+            <a class="button--white button--block__club">Trouvez votre enseignant</a>
+        
+        </div>
+
+    </section>
+
     
-    </div>
-    
-    <div class="main">
+    <section class="main">
         
-        <div class="main__contenu"></div>
+        <div class="main__content">
         
-        <aside class="main__sidebar"></aside>
+            <h2>Actualités de la ligue</h2>
+                
+                <article>
+                    
+                    <span class="article__date">04 AVRIL</span>
+                    <span class="article__title">Individuels 2017</span>
+                    <p class="article__content">Les inscriptions pour les championnats individuels catégorie « Sénior » sont ouvertes jusqu’au 19 février 2017.</p>
+                    <a class="button--blue article__button">Inscrivez-vous</a>
+                    
+                </article>
+            
+                <article>
+                    
+                    <span class="article__date">04 AVRIL</span>
+                    <span class="article__title">Individuels 2017</span>
+                    <p class="article__content">Les inscriptions pour les championnats individuels catégorie « Sénior » sont ouvertes jusqu’au 19 février 2017.</p>
+                    <a class="button--blue article__button">Inscrivez-vous</a>
+                    
+                </article>
+            
+                <article>
+                    
+                    <span class="article__date">04 AVRIL</span>
+                    <span class="article__title">Individuels 2017</span>
+                    <p class="article__content">Les inscriptions pour les championnats individuels catégorie « Sénior » sont ouvertes jusqu’au 19 février 2017.</p>
+                    <a class="button--blue article__button">Inscrivez-vous</a>
+                    
+                </article>
+            
+            
         
-    </div>
+        </div>
+            
+    </section>
+        
+    <aside class="main__sidebar"></aside>
+        
     
     <div class="footer"></div>
     
