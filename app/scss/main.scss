@@ -247,7 +247,8 @@ header {
 }
 
 .home__news,
-.home__results {
+.home__results,
+.home__quick-links {
     margin-top: 50px;
 }
 
@@ -288,18 +289,21 @@ header {
     margin-bottom: 15px;
 }
 
-.result:not(:last-of-type) {
-    margin-bottom: 30px;
+
+.result,
+.all-results__button {
+    margin-top: 40px;
 }
 
-.result__line {
+.result__table {
     @include font-opensans;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-size: 1rem;
-    display: flex;
+    width: 100%;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;*/
     
     &:last-of-type {
         margin-top: 5px;
@@ -307,7 +311,7 @@ header {
 }
 
 .result__player {
-    flex-grow: 3;
+    width: 55%;
     background-color: $red;
     padding: 15px 8px;
     font-weight: 700;
@@ -315,7 +319,7 @@ header {
 }
 
 .result--set {
-    flex-grow: 1;
+    width: 15%;
     margin-left: 5px;
     background-color: rgb(240, 240, 240);
     text-align: center;
@@ -328,4 +332,71 @@ header {
     text-transform: uppercase;
     color: $blue;
     font-size: 1rem;
+}
+
+.quick-links li {
+    position: relative;
+    display: block;
+    padding: 15px 0 15px 30px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    
+    &:last-of-type {
+        border: 0;
+    }
+    
+    &:before {
+        content: "\279E";
+        display: block;
+        @include font-opensans(700);
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        color: $red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px 0;
+        
+    }
+    
+    a:link,
+    a:visited,
+    a:hover {
+        border: 0;
+    }
+}
+
+
+footer {
+    @include span(full);
+    background-color: $blue;
+    color: rgba(255, 255, 255, .5);
+    padding-top: 25px;
+    padding-bottom: 30px;
+    
+    p {
+        font-size: .9rem;
+    }
+    
+    p a:link,
+    p a:visited,
+    p a:hover {
+        color: rgba(255, 255, 255, .5);
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+    }
+}
+
+
+
+a.footer__top-link {
+    @include font-rubik(700);
+    text-transform: uppercase;
+    font-size: .9rem;
+    display: inline-block;
+    color: rgba(255, 255, 255, .5);
+    border: 0;
+    padding: 5px 0;
+    
+    &:hover {
+        border: 0;
+    }
 }
