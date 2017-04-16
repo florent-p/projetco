@@ -13,8 +13,8 @@
     font-style: $style;
 }
 
-a:link,
-a:visited {
+p a,
+li a {
     color: $blue;
     display: inline-block;
     text-decoration: none;
@@ -22,7 +22,8 @@ a:visited {
     transition: all .1s ease-in-out;
 }
 
-a:hover {
+p a:hover,
+li a:hover {
     color: $red;
     border-bottom: 1px dotted $red;
 }
@@ -33,7 +34,7 @@ h2 {
     font-size: 1.5rem;
     text-transform: uppercase;
     color: rgb(245, 96, 78);
-    margin: 0;
+    margin: 60px 0 30px 0;
     
     &:after {
         content: '';
@@ -54,5 +55,12 @@ h3 {
 
 p {
     margin: 10px 0 0;
+}
+
+
+@media screen and (min-width: 768px) {
+    h2 {
+        margin: 100px 0 30px 0;
+    }
 }
 

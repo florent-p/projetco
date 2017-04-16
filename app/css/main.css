@@ -459,8 +459,8 @@ ul {
   padding: 0;
 }
 
-a:link,
-a:visited {
+p a,
+li a {
   color: #0e1a32;
   display: inline-block;
   text-decoration: none;
@@ -468,7 +468,8 @@ a:visited {
   transition: all .1s ease-in-out;
 }
 
-a:hover {
+p a:hover,
+li a:hover {
   color: #f5604e;
   border-bottom: 1px dotted #f5604e;
 }
@@ -480,7 +481,7 @@ h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #f5604e;
-  margin: 0;
+  margin: 60px 0 30px 0;
 }
 
 h2:after {
@@ -505,8 +506,14 @@ p {
   margin: 10px 0 0;
 }
 
-a:link,
-a:visited {
+@media screen and (min-width: 768px) {
+  h2 {
+    margin: 100px 0 30px 0;
+  }
+}
+
+p a,
+li a {
   color: #0e1a32;
   display: inline-block;
   text-decoration: none;
@@ -514,7 +521,8 @@ a:visited {
   transition: all .1s ease-in-out;
 }
 
-a:hover {
+p a:hover,
+li a:hover {
   color: #f5604e;
   border-bottom: 1px dotted #f5604e;
 }
@@ -526,7 +534,7 @@ h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #f5604e;
-  margin: 0;
+  margin: 60px 0 30px 0;
 }
 
 h2:after {
@@ -549,6 +557,12 @@ h3 {
 
 p {
   margin: 10px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    margin: 100px 0 30px 0;
+  }
 }
 
 [class^="button--"] {
@@ -568,8 +582,9 @@ p {
 }
 
 .button--white:hover {
+  color: white;
   background-color: #f5604e;
-  border: 1px solid #f5604e;
+  border-color: #f5604e;
 }
 
 .button--blue {
@@ -580,6 +595,7 @@ p {
 .button--blue:hover {
   background-color: #0e1a32;
   color: white;
+  border-color: #0e1a32;
 }
 
 /* ! CSS TENNIS FRANCHE-COMTE 
@@ -704,6 +720,7 @@ p {
 .sub__links li a {
   color: white;
   text-decoration: none;
+  border-bottom: 0;
 }
 
 header {
@@ -742,10 +759,16 @@ header:before {
 
 .hero__news {
   display: block;
-  background-color: white;
-  padding: 20px;
+  padding: 10px;
   margin: 30px 0 15px 0;
   text-align: center;
+  background-color: white;
+}
+
+.hero__news h2 {
+  margin: 0;
+  padding: 20px 0 10px 0;
+  background-color: white;
 }
 
 .hero__news h2:after {
@@ -758,6 +781,9 @@ header:before {
   font-style: normal;
   color: #f5604e;
   font-size: 1.2rem;
+  padding: 10px;
+  margin: 0;
+  background-color: white;
 }
 
 .hero__button {
@@ -839,29 +865,18 @@ header:before {
 }
 
 .main__content {
-  max-width: 440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.main__content:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.main__content h2 {
-  margin: 0;
-}
-
-.main__content article {
-  margin-top: 40px;
+  width: 100%;
+  float: left;
 }
 
 .home__news,
 .home__results,
 .home__quick-links {
   margin-top: 50px;
+}
+
+.home__news article:not(:last-of-type) {
+  margin-bottom: 40px;
 }
 
 .article__date {
@@ -899,25 +914,16 @@ header:before {
   margin-top: 10px;
 }
 
-.home__results {
-  max-width: 440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.home__results:after {
-  content: " ";
-  display: block;
-  clear: both;
+.home__results .result:not(:last-of-type) {
+  margin-bottom: 40px;
 }
 
 .result__type {
   margin-bottom: 15px;
 }
 
-.result,
 .all-results__button {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .result__table {
@@ -969,6 +975,14 @@ header:before {
   border-bottom: 1px solid #f0f0f0;
 }
 
+.quick-links li:first-of-type {
+  padding: 0 0 15px 30px;
+}
+
+.quick-links li:first-of-type:before {
+  padding: 0;
+}
+
 .quick-links li:last-of-type {
   border: 0;
 }
@@ -980,7 +994,7 @@ header:before {
   font-weight: 700;
   font-style: normal;
   font-size: 1.2rem;
-  line-height: 1.2rem;
+  line-height: .8;
   color: #f5604e;
   position: absolute;
   top: 0;
@@ -1001,6 +1015,7 @@ footer {
   padding-right: 5.55556%;
   background-color: #0e1a32;
   color: rgba(255, 255, 255, 0.5);
+  margin-top: 30px;
   padding-top: 25px;
   padding-bottom: 30px;
 }
@@ -1030,4 +1045,83 @@ a.footer__top-link {
 
 a.footer__top-link:hover {
   border: 0;
+}
+
+/*  ################
+    768px+
+    ################ */
+@media screen and (min-width: 768px) {
+  header {
+    padding: 200px 0 100px 0;
+  }
+  .hero__logo-tennisfc {
+    margin: 0;
+  }
+  .hero__news {
+    display: inline-block;
+    text-align: left;
+    background-color: transparent;
+    padding: 0;
+  }
+  .hero__news h2 {
+    display: inline-block;
+    background-color: white;
+    padding: 15px;
+  }
+  .hero__news h2:after {
+    margin: 5px 0 0;
+  }
+  .hero__news p {
+    max-width: 60%;
+    padding: 15px;
+  }
+  .hero__button {
+    display: inline-block;
+  }
+  .header__blocks-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .header__blocks-wrap [class^="block__"] {
+    width: 32%;
+    border-bottom: 8px solid #f5604e;
+  }
+  .button--block__club {
+    padding: 10px 5px;
+    max-width: 80%;
+  }
+  article {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+  .article__date {
+    display: inline-block;
+    text-align: center;
+    margin-right: 30px;
+    padding: 10px;
+    border-bottom: 8px solid #de544e;
+  }
+  .home__results .result:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+  .home__results-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .home__results-wrap .result {
+    width: 46%;
+    margin-bottom: 0;
+  }
 }

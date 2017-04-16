@@ -112,8 +112,9 @@ $susy: (
     border-bottom: 1px solid $red-dark;
 
         a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border-bottom: 0;
         }
 }
 
@@ -149,19 +150,28 @@ header {
 
 .hero__news {
     display: block;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
+    padding: 10px;
     margin: 30px 0 15px 0;
     text-align: center;
+    background-color: rgb(255, 255, 255);
     
-    h2:after {
+    h2 {
+        margin: 0;
+        padding: 20px 0 10px 0;
+        background-color: rgb(255, 255, 255);
+        
+        &:after {
         margin: 5px auto 0 auto;
+        }
     }
     
     p {
         @include font-rubik(400);
         color: $red;
         font-size: 1.2rem;
+        padding: 10px;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
     }
 }
 
@@ -235,21 +245,20 @@ header {
 
 
 .main__content {
-    @include container;
-    
-    h2 {
-        margin: 0;
-    }
-    
-    article {
-        margin-top: 40px;
-    }
+    @include span(full no-gutter);
+
 }
 
 .home__news,
 .home__results,
 .home__quick-links {
     margin-top: 50px;
+}
+
+.home__news {
+    article:not(:last-of-type) {
+        margin-bottom: 40px;
+    }
 }
 
 .article__date {
@@ -282,7 +291,10 @@ header {
 }
 
 .home__results {
-    @include container;
+    
+    .result:not(:last-of-type) {
+        margin-bottom: 40px;
+    }
 }
 
 .result__type {
@@ -290,9 +302,8 @@ header {
 }
 
 
-.result,
 .all-results__button {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .result__table {
@@ -334,11 +345,20 @@ header {
     font-size: 1rem;
 }
 
+
 .quick-links li {
     position: relative;
     display: block;
     padding: 15px 0 15px 30px;
     border-bottom: 1px solid rgb(240, 240, 240);
+    
+    &:first-of-type {
+        padding: 0 0 15px 30px;
+        
+        &:before {
+            padding: 0;
+        }
+    }
     
     &:last-of-type {
         border: 0;
@@ -349,7 +369,7 @@ header {
         display: block;
         @include font-opensans(700);
         font-size: 1.2rem;
-        line-height: 1.2rem;
+        line-height: .8;
         color: $red;
         position: absolute;
         top: 0;
@@ -370,6 +390,7 @@ footer {
     @include span(full);
     background-color: $blue;
     color: rgba(255, 255, 255, .5);
+    margin-top: 30px;
     padding-top: 25px;
     padding-bottom: 30px;
     
@@ -399,4 +420,105 @@ a.footer__top-link {
     &:hover {
         border: 0;
     }
+}
+
+
+
+/*  ################
+    768px+
+    ################ */
+
+@media screen and (min-width: 768px) {
+    
+    header {
+        padding: 200px 0 100px 0;
+    }
+    
+    .hero__logo-tennisfc {
+        margin: 0;
+    }
+    
+    .hero__news {
+        display: inline-block;
+        text-align: left;
+        background-color: transparent;
+        padding: 0;
+        
+        h2 {
+            display: inline-block;
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            
+            &:after {
+                margin: 5px 0 0;
+            }
+        }
+        
+        p {
+            max-width: 60%;
+            padding: 15px;
+        }
+    }
+    
+    .hero__button {
+    display: inline-block;    
+    }
+    
+    
+    
+    .header__blocks-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+            [class^="block__"] {
+                width: 32%;
+                border-bottom: 8px solid $red;
+        
+        }
+    }
+    
+    .button--block__club {
+        padding: 10px 5px;
+        max-width: 80%;
+    }
+    
+    
+    article {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .article__date {
+        display: inline-block;
+        text-align: center;
+        margin-right: 30px;
+        padding: 10px;
+        border-bottom: 8px solid $red-dark;
+    }
+    
+    
+    .home__results {
+        
+        .result:not(:last-of-type) {
+            margin-bottom: 0;
+        }
+    }
+    
+    .home__results-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .result {
+            width: 46%;
+            margin-bottom: 0;
+        }
+     
+    }
+    
+
+    
+    
 }

@@ -17,8 +17,9 @@
 } 
 
 .button--white:hover {
+    color: rgb(255, 255, 255);
     background-color: $red;
-    border: 1px solid $red;
+    border-color: $red;
 }
 
 .button--blue {
@@ -29,4 +30,5 @@
 .button--blue:hover {
     background-color: $blue;
     color: rgb(255, 255, 255);
+    border-color: $blue;
 }
