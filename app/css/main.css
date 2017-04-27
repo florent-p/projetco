@@ -459,6 +459,25 @@ ul {
   padding: 0;
 }
 
+a.arrow-link:before {
+  content: "\279E";
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: .8;
+  color: #f5604e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+}
+
+a.arrow-link:hover {
+  border: 0;
+}
+
 p a,
 li a {
   color: #0e1a32;
@@ -472,6 +491,32 @@ p a:hover,
 li a:hover {
   color: #f5604e;
   border-bottom: 1px dotted #f5604e;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #0e1a32;
+  line-height: 25px;
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-left: 35px;
+}
+
+h1:before {
+  content: '/';
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5604e;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 h2 {
@@ -490,6 +535,15 @@ h2:after {
   background-color: #f5604e;
   width: 60px;
   height: 4px;
+}
+
+h2.form-title {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+h2.form-title:after {
+  display: none;
 }
 
 h3 {
@@ -512,6 +566,25 @@ p {
   }
 }
 
+a.arrow-link:before {
+  content: "\279E";
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: .8;
+  color: #f5604e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+}
+
+a.arrow-link:hover {
+  border: 0;
+}
+
 p a,
 li a {
   color: #0e1a32;
@@ -525,6 +598,32 @@ p a:hover,
 li a:hover {
   color: #f5604e;
   border-bottom: 1px dotted #f5604e;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #0e1a32;
+  line-height: 25px;
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-left: 35px;
+}
+
+h1:before {
+  content: '/';
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5604e;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 h2 {
@@ -543,6 +642,15 @@ h2:after {
   background-color: #f5604e;
   width: 60px;
   height: 4px;
+}
+
+h2.form-title {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+h2.form-title:after {
+  display: none;
 }
 
 h3 {
@@ -723,7 +831,7 @@ p {
   border-bottom: 0;
 }
 
-header {
+.header-home {
   width: 100%;
   float: left;
   background-image: url(../img/header-tennisfc.jpg);
@@ -732,7 +840,7 @@ header {
   padding: 200px 0 20px 0;
 }
 
-header:before {
+.header-home:before {
   content: '';
   background-color: rgba(0, 0, 0, 0.3);
   display: block;
@@ -856,6 +964,30 @@ header:before {
   max-width: 100%;
 }
 
+.page-title {
+  width: 100%;
+  float: left;
+  padding-left: 5.55556%;
+  padding-right: 5.55556%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  border-bottom: 5px solid #f5604e;
+  /* h1 {
+    @include font-rubik(700);
+    color: $blue;
+    text-transform: uppercase;
+    } */
+}
+
+.page-title i {
+  color: #f5604e;
+  font-size: 25px;
+  line-height: 35px;
+  position: absolute;
+  top: 17px;
+}
+
 .main,
 .main__sidebar {
   width: 100%;
@@ -975,11 +1107,7 @@ header:before {
   border-bottom: 1px solid #f0f0f0;
 }
 
-.quick-links li:first-of-type {
-  padding: 0 0 15px 30px;
-}
-
-.quick-links li:first-of-type:before {
+.quick-links li:before {
   padding: 0;
 }
 
@@ -987,24 +1115,9 @@ header:before {
   border: 0;
 }
 
-.quick-links li:before {
-  content: "\279E";
-  display: block;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.2rem;
-  line-height: .8;
-  color: #f5604e;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 15px 0;
-}
-
-.quick-links li a:link,
-.quick-links li a:visited,
-.quick-links li a:hover {
+a:link,
+a:visited,
+a:hover {
   border: 0;
 }
 
@@ -1022,6 +1135,7 @@ footer {
 
 footer p {
   font-size: .9rem;
+  line-height: 18px;
 }
 
 footer p a:link,
@@ -1047,11 +1161,41 @@ a.footer__top-link:hover {
   border: 0;
 }
 
+.footer__logos {
+  margin-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 100%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.footer__logos li.logo-s {
+  width: 40px;
+}
+
+.footer__logos li.logo-l {
+  width: 80px;
+}
+
+.footer__logos li img {
+  opacity: .5;
+  transition: all .5s ease-in-out;
+}
+
+.footer__logos li img:hover {
+  opacity: 1;
+}
+
 /*  ################
     768px+
     ################ */
 @media screen and (min-width: 768px) {
-  header {
+  .header-home {
     padding: 200px 0 100px 0;
   }
   .hero__logo-tennisfc {

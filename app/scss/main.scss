@@ -118,7 +118,7 @@ $susy: (
         }
 }
 
-header {
+.header-home {
     @include span(full no-gutter);
     background-image: url(../img/header-tennisfc.jpg); 
     background-position: 60% 40%;
@@ -237,6 +237,31 @@ header {
 }
 
 
+.page-title {
+    
+    @include span(full);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    border-bottom: 5px solid $red;
+    
+    i {
+        color: $red;
+        font-size: 25px;
+        line-height: 35px;
+        position: absolute;
+        top: 17px;
+        
+    }
+    
+    /* h1 {
+    @include font-rubik(700);
+    color: $blue;
+    text-transform: uppercase;
+    } */
+}
+
+
 
 .main,
 .main__sidebar {
@@ -351,39 +376,21 @@ header {
     display: block;
     padding: 15px 0 15px 30px;
     border-bottom: 1px solid rgb(240, 240, 240);
-    
-    &:first-of-type {
-        padding: 0 0 15px 30px;
         
         &:before {
             padding: 0;
         }
-    }
     
     &:last-of-type {
         border: 0;
     }
-    
-    &:before {
-        content: "\279E";
-        display: block;
-        @include font-opensans(700);
-        font-size: 1.2rem;
-        line-height: .8;
-        color: $red;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 15px 0;
-        
-    }
+}
     
     a:link,
     a:visited,
     a:hover {
         border: 0;
     }
-}
 
 
 footer {
@@ -396,6 +403,7 @@ footer {
     
     p {
         font-size: .9rem;
+        line-height: 18px;
     }
     
     p a:link,
@@ -422,6 +430,37 @@ a.footer__top-link {
     }
 }
 
+.footer__logos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+    li {   
+        
+        &.logo-s {
+            width: 40px;
+        }
+        
+        &.logo-l {
+            width: 80px;
+        }
+        
+        
+        img {
+            opacity: .5;
+            transition: all .5s ease-in-out;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
 
 
 /*  ################
@@ -430,7 +469,7 @@ a.footer__top-link {
 
 @media screen and (min-width: 768px) {
     
-    header {
+    .header-home {
         padding: 200px 0 100px 0;
     }
     

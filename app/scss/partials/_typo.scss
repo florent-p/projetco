@@ -13,6 +13,28 @@
     font-style: $style;
 }
 
+a.arrow-link {
+    
+    &:before {
+        content: "\279E";
+        display: block;
+        @include font-opensans(700);
+        font-size: 1.2rem;
+        line-height: .8;
+        color: $red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px 0;
+        
+    }
+    
+    &:hover {
+        border: 0;
+    }
+}
+
+
 p a,
 li a {
     color: $blue;
@@ -29,6 +51,29 @@ li a:hover {
 }
 
 
+h1 {
+    @include font-rubik(700);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: $blue;
+    line-height: 25px;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-left: 35px;
+    
+        &:before {
+        content: '/';
+        @include font-rubik(400);
+        color: $red;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+    
 h2 {
     @include font-rubik(700, italic);
     font-size: 1.5rem;
@@ -42,6 +87,15 @@ h2 {
         background-color: rgb(245, 96, 78);
         width: 60px;
         height: 4px;
+    }
+    
+    &.form-title {
+        font-size: 1rem;
+        margin: 20px 0;
+        
+        &:after {
+            display: none;
+        }
     }
 }
 
