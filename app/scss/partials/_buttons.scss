@@ -1,12 +1,9 @@
-@import "typo";
-@import "variables";
-
-
 [class^="button--"] {
      @include font-rubik(300);
     text-transform: uppercase;
     display: inline-block;
-    border: 1px solid;
+    border-width: 1px;
+    border-style: solid;
     padding: 10px 25px;
     transition: all .1s ease-in-out;
 }

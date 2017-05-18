@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-
+    
     $('.navbar__menu', this).click(function() {
         
         // [MOBILE] Changement de background quand le menu est ouvert
@@ -11,6 +11,9 @@ jQuery(document).ready(function($) {
         } else {
             $('.nav__menu').stop().slideDown();
         }
+        
+        // ANIMATION ICONE BURGER
+        $('.menu__icon').toggleClass('icon--active');
         
     });
     
