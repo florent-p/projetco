@@ -609,6 +609,18 @@ p {
   box-sizing: border-box;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .nav {
   width: 100%;
   float: left;
@@ -620,8 +632,6 @@ p {
 .nav__navbar {
   width: 100%;
   float: left;
-  padding-left: 7.14286%;
-  padding-right: 7.14286%;
   padding-right: 0;
 }
 
@@ -772,8 +782,6 @@ p {
 .sub__cat {
   width: 100%;
   float: left;
-  padding-left: 7.14286%;
-  padding-right: 7.14286%;
   background-color: #de544e;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -783,8 +791,6 @@ p {
 .sub__links {
   width: 100%;
   float: left;
-  padding-left: 7.14286%;
-  padding-right: 7.14286%;
   display: none;
 }
 
@@ -822,8 +828,6 @@ p {
 .header__hero {
   width: 100%;
   float: left;
-  padding-left: 7.14286%;
-  padding-right: 7.14286%;
   position: relative;
 }
 
@@ -941,8 +945,6 @@ p {
 .page-title {
   width: 100%;
   float: left;
-  padding-left: 7.14286%;
-  padding-right: 7.14286%;
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
@@ -966,8 +968,6 @@ p {
 .main__sidebar {
   width: 100%;
   float: left;
-  padding-left: 7.14286%;
-  padding-right: 7.14286%;
 }
 
 .main__content {
@@ -1163,8 +1163,13 @@ a.footer__top-link:hover {
     1366px+
     ################ */
 @media screen and (min-width: 1366px) {
-  .nav__navbar {
-    padding-right: 5.55556%;
+  .main__sidebar {
+    width: 41.66667%;
+    float: left;
+  }
+  .main__content {
+    width: 58.33333%;
+    float: left;
   }
 }
 
@@ -1172,6 +1177,10 @@ a.footer__top-link:hover {
     768px+
     ################ */
 @media screen and (min-width: 768px) {
+  .navbar__menu {
+    margin-left: 83.33333%;
+    font-size: 1rem;
+  }
   .header-home {
     padding: 200px 0 100px 0;
   }

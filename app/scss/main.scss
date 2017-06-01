@@ -10,7 +10,15 @@ $susy: (
     columns: 6,
     gutters: 6,
     gutter-position: inside
+); 
+
+$susyDesktop: (
+    global-box-sizing: border-box,
+    columns: 12,
+    gutters: 6,
+    gutter-position: inside
 );
+
 
 
 
@@ -21,6 +29,18 @@ $susy: (
 
 @include border-box-sizing;
 
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .nav {
     @include span(full no-gutter);
     background-color: $blue;
@@ -29,7 +49,7 @@ $susy: (
 }
     
 .nav__navbar {
-    @include span(full);
+    @include span(full no-gutter);
     padding-right: 0;
 }
       
@@ -169,7 +189,7 @@ $susy: (
 }
             
 .sub__cat {
-    @include span(full);
+    @include span(full no-gutter);
     background-color: $red-dark;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -177,7 +197,7 @@ $susy: (
 }
             
 .sub__links {
-    @include span(full);
+    @include span(full no-gutter);
     display: none;
 }
             
@@ -212,7 +232,7 @@ $susy: (
 }
 
 .header__hero {
-    @include span(6);
+    @include span(full no-gutter);
     position: relative;
 }
 
@@ -319,7 +339,7 @@ $susy: (
 
 .page-title {
     
-    @include span(full);
+    @include span(full no-gutter);
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
@@ -345,7 +365,7 @@ $susy: (
 
 .main,
 .main__sidebar {
-    @include span(full);
+    @include span(full no-gutter);
 }
 
 
@@ -544,10 +564,18 @@ a.footer__top-link {
 
 @media screen and (min-width: 1366px) {
     
-    .nav__navbar {
-        padding-right: 5.55556%;
-    }
+    @include with-layout($susyDesktop) {
+
+        .main__sidebar {
+            @include span(5 no-gutter);
+        }
+
+
+            .main__content {
+        @include span(7 no-gutter); 
+        }
     
+    }
 }
 
 
@@ -557,6 +585,11 @@ a.footer__top-link {
 
 @media screen and (min-width: 768px) {
     
+    .navbar__menu {
+        @include pre(5 of 6);
+        font-size: 1rem;
+    }
+        
     .header-home {
         padding: 200px 0 100px 0;
     }
