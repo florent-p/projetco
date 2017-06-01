@@ -14,6 +14,8 @@
 
 a.arrow-link {
     
+    border: 0;
+    
     &:before {
         content: "\279E";
         display: block;

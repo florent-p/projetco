@@ -7,11 +7,11 @@
 
 $susy: (
     global-box-sizing: border-box,
-    container: 440px,
     columns: 6,
-    gutters: 2,
+    gutters: 6,
     gutter-position: inside
 );
+
 
 
 
@@ -263,7 +263,7 @@ $susy: (
 .header__blocks {
     @include span(6);
     position: relative;
-    margin-top: 50px;
+    margin-top: 20px;
     
     & [class^="block__"] {
         background-color: $blue;
@@ -301,6 +301,12 @@ $susy: (
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 20px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.header__pre-blocks:before {
+    display: none;
 }
 
 .button--block__club {
@@ -529,6 +535,20 @@ a.footer__top-link {
 
 }
 
+
+
+
+/*  ################
+    1366px+
+    ################ */
+
+@media screen and (min-width: 1366px) {
+    
+    .nav__navbar {
+        padding-right: 5.55556%;
+    }
+    
+}
 
 
 /*  ################
