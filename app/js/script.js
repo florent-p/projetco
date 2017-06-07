@@ -14,6 +14,7 @@ jQuery(document).ready(function($) {
         
         // ANIMATION ICONE BURGER
         $('.menu__icon').toggleClass('icon--active');
+    
         
     });
     

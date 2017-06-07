@@ -29,3 +29,25 @@
     color: rgb(255, 255, 255);
     border-color: $blue;
 }
+
+
+.button--block__club {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding: 20px 0;
+    width: 250px;
+    max-width: 100%;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    
+    .button--block__club {
+        line-height: .7rem;
+        max-width: 80%;
+    }
+    
+}
